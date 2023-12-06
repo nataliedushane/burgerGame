@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B74217092B20E0BB00F08395 /* SeeBurgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74217082B20E0BB00F08395 /* SeeBurgerViewController.swift */; };
+		B7ACC6B12B20CC2B0058FB61 /* BurgersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ACC6B02B20CC2B0058FB61 /* BurgersViewController.swift */; };
+		B7ACC6B32B20CE070058FB61 /* CazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ACC6B22B20CE070058FB61 /* CazyCell.swift */; };
 		B7DF5C512B1F777200C5B61E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF5C502B1F777200C5B61E /* AppDelegate.swift */; };
 		B7DF5C532B1F777200C5B61E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF5C522B1F777200C5B61E /* SceneDelegate.swift */; };
 		B7DF5C552B1F777200C5B61E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF5C542B1F777200C5B61E /* ViewController.swift */; };
@@ -17,6 +20,7 @@
 		B7DF5C6B2B1F777400C5B61E /* burgerGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF5C6A2B1F777400C5B61E /* burgerGameTests.swift */; };
 		B7DF5C752B1F777400C5B61E /* burgerGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF5C742B1F777400C5B61E /* burgerGameUITests.swift */; };
 		B7DF5C772B1F777400C5B61E /* burgerGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF5C762B1F777400C5B61E /* burgerGameUITestsLaunchTests.swift */; };
+		B7DF5C842B1F78A400C5B61E /* BurgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF5C832B1F78A400C5B61E /* BurgerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B74217082B20E0BB00F08395 /* SeeBurgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeBurgerViewController.swift; sourceTree = "<group>"; };
+		B7ACC6B02B20CC2B0058FB61 /* BurgersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgersViewController.swift; sourceTree = "<group>"; };
+		B7ACC6B22B20CE070058FB61 /* CazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CazyCell.swift; sourceTree = "<group>"; };
 		B7DF5C4D2B1F777200C5B61E /* burgerGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = burgerGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7DF5C502B1F777200C5B61E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7DF5C522B1F777200C5B61E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +58,7 @@
 		B7DF5C702B1F777400C5B61E /* burgerGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = burgerGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7DF5C742B1F777400C5B61E /* burgerGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burgerGameUITests.swift; sourceTree = "<group>"; };
 		B7DF5C762B1F777400C5B61E /* burgerGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burgerGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B7DF5C832B1F78A400C5B61E /* BurgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,9 @@
 		B7DF5C442B1F777200C5B61E = {
 			isa = PBXGroup;
 			children = (
+				B74217082B20E0BB00F08395 /* SeeBurgerViewController.swift */,
+				B7ACC6B22B20CE070058FB61 /* CazyCell.swift */,
+				B7ACC6B02B20CC2B0058FB61 /* BurgersViewController.swift */,
 				B7DF5C4F2B1F777200C5B61E /* burgerGame */,
 				B7DF5C692B1F777400C5B61E /* burgerGameTests */,
 				B7DF5C732B1F777400C5B61E /* burgerGameUITests */,
@@ -105,6 +116,7 @@
 				B7DF5C522B1F777200C5B61E /* SceneDelegate.swift */,
 				B7DF5C542B1F777200C5B61E /* ViewController.swift */,
 				B7DF5C562B1F777200C5B61E /* Main.storyboard */,
+				B7DF5C832B1F78A400C5B61E /* BurgerViewController.swift */,
 				B7DF5C5C2B1F777400C5B61E /* Assets.xcassets */,
 				B7DF5C5E2B1F777400C5B61E /* LaunchScreen.storyboard */,
 				B7DF5C612B1F777400C5B61E /* Info.plist */,
@@ -264,7 +276,11 @@
 				B7DF5C5B2B1F777200C5B61E /* burgerGame.xcdatamodeld in Sources */,
 				B7DF5C552B1F777200C5B61E /* ViewController.swift in Sources */,
 				B7DF5C512B1F777200C5B61E /* AppDelegate.swift in Sources */,
+				B74217092B20E0BB00F08395 /* SeeBurgerViewController.swift in Sources */,
+				B7ACC6B32B20CE070058FB61 /* CazyCell.swift in Sources */,
 				B7DF5C532B1F777200C5B61E /* SceneDelegate.swift in Sources */,
+				B7DF5C842B1F78A400C5B61E /* BurgerViewController.swift in Sources */,
+				B7ACC6B12B20CC2B0058FB61 /* BurgersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

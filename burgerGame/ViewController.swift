@@ -5,7 +5,15 @@
 //  Created by NATALIE DUSHANE on 12/5/23.
 //
 
+
 import UIKit
+
+class AppData{
+    static var burgers = [[UIColor]]()
+    static var clicked = 0
+    static var rates = [Int]()
+    static var dates = [Date]()
+}
 
 class ViewController: UIViewController {
 
@@ -14,6 +22,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func toBurgerAction(_ sender: Any) {
+        performSegue(withIdentifier: "toBurger", sender: self)
+    }
+    
+    @IBAction func toBurgersAction(_ sender: Any) {
+        performSegue(withIdentifier: "toBurgers", sender: self)
 
+    }
+    
 }
 
