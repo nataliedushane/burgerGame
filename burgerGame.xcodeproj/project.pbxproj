@@ -89,9 +89,6 @@
 		B7DF5C442B1F777200C5B61E = {
 			isa = PBXGroup;
 			children = (
-				B74217082B20E0BB00F08395 /* SeeBurgerViewController.swift */,
-				B7ACC6B22B20CE070058FB61 /* CazyCell.swift */,
-				B7ACC6B02B20CC2B0058FB61 /* BurgersViewController.swift */,
 				B7DF5C4F2B1F777200C5B61E /* burgerGame */,
 				B7DF5C692B1F777400C5B61E /* burgerGameTests */,
 				B7DF5C732B1F777400C5B61E /* burgerGameUITests */,
@@ -112,10 +109,13 @@
 		B7DF5C4F2B1F777200C5B61E /* burgerGame */ = {
 			isa = PBXGroup;
 			children = (
-				B7DF5C502B1F777200C5B61E /* AppDelegate.swift */,
-				B7DF5C522B1F777200C5B61E /* SceneDelegate.swift */,
-				B7DF5C542B1F777200C5B61E /* ViewController.swift */,
 				B7DF5C562B1F777200C5B61E /* Main.storyboard */,
+				B7ACC6B22B20CE070058FB61 /* CazyCell.swift */,
+				B7DF5C522B1F777200C5B61E /* SceneDelegate.swift */,
+				B7DF5C502B1F777200C5B61E /* AppDelegate.swift */,
+				B7DF5C542B1F777200C5B61E /* ViewController.swift */,
+				B7ACC6B02B20CC2B0058FB61 /* BurgersViewController.swift */,
+				B74217082B20E0BB00F08395 /* SeeBurgerViewController.swift */,
 				B7DF5C832B1F78A400C5B61E /* BurgerViewController.swift */,
 				B7DF5C5C2B1F777400C5B61E /* Assets.xcassets */,
 				B7DF5C5E2B1F777400C5B61E /* LaunchScreen.storyboard */,

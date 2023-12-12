@@ -8,7 +8,7 @@
 import UIKit
 
 class BurgerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
+    var defaults = UserDefaults.standard
 
     @IBOutlet weak var tableView: UITableView!
     var colors = [UIColor]()
@@ -23,15 +23,30 @@ class BurgerViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @IBAction func deleteLastAction(_ sender: Any) {
-        colors.remove(at: 0)
-        tableView.reloadData()
+        if(colors.count == 0){
+            let ac = UIAlertController(title: "You don't have any ingredients to take away :(", message: nil, preferredStyle: .alert)
+
+            let submitAction = UIAlertAction(title: "OK", style: .default)
+            ac.addAction(submitAction)
+
+            present(ac, animated: true)
+        }
+        else{
+            colors.remove(at: 0)
+            tableView.reloadData()
+        }
     }
     
     @IBAction func saveAction(_ sender: Any) {
         AppData.burgers.append(colors)
         AppData.dates.append(Date())
+        promptForName()
         
-        promptForAnswer()
+        
+        
+        colors.removeAll()
+     
+        tableView.reloadData()
         
     }
     
@@ -70,12 +85,13 @@ class BurgerViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     func promptForAnswer() {
-        let ac = UIAlertController(title: "Rate the burger!!!", message: nil, preferredStyle: .alert)
+        let ac = UIAlertController(title: "Rate the burger a number!!!", message: nil, preferredStyle: .alert)
         ac.addTextField()
 
         let submitAction = UIAlertAction(title: "Submit", style: .default) { [unowned ac] _ in
             let answer = ac.textFields![0]
             AppData.rates.append((Int)(answer.text!) ?? 0)
+            
         }
 
         ac.addAction(submitAction)
@@ -83,4 +99,21 @@ class BurgerViewController: UIViewController, UITableViewDelegate, UITableViewDa
         present(ac, animated: true)
     }
     
+    func promptForName() {
+        let ac = UIAlertController(title: "Name the Burger!!!", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+
+        let submitAction = UIAlertAction(title: "Name him", style: .default) { [unowned ac] _ in
+            let answer = ac.textFields![0]
+            AppData.names.append(answer.text!)
+           
+            self.promptForAnswer()
+        }
+
+        ac.addAction(submitAction)
+
+        present(ac, animated: true)
+        
+    }
+
 }

@@ -8,11 +8,12 @@
 
 import UIKit
 
-class AppData{
+class AppData : Codable{
     static var burgers = [[UIColor]]()
     static var clicked = 0
     static var rates = [Int]()
     static var dates = [Date]()
+    static var names = [String]()
 }
 
 class ViewController: UIViewController {

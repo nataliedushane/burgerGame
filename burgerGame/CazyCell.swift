@@ -13,8 +13,8 @@ import UIKit
 
 public class CazyCell : UICollectionViewCell{
     
-    @IBOutlet weak var labelOutlet: UILabel!
     
+    @IBOutlet weak var labelOutlet: UILabel!
     
     
 }
