@@ -11,7 +11,7 @@ class BurgerViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var defaults = UserDefaults.standard
 
     @IBOutlet weak var tableView: UITableView!
-    var colors = [UIColor]()
+    var colors = [String]()
     
     
     override func viewDidLoad() {
@@ -42,33 +42,56 @@ class BurgerViewController: UIViewController, UITableViewDelegate, UITableViewDa
         AppData.dates.append(Date())
         promptForName()
         
+      /*  let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(AppData.burgers){
+           defaults.set(encoded, forKey: "theBurgers")
+       }
         
+        if let encoded = try? encoder.encode(AppData.dates){
+           defaults.set(encoded, forKey: "theDates")
+       }
         
+        if let encoded = try? encoder.encode(AppData.names){
+           defaults.set(encoded, forKey: "theNames")
+       }
+        
+        if let encoded = try? encoder.encode(AppData.rates){
+           defaults.set(encoded, forKey: "theRates")
+       }
+      */
         colors.removeAll()
      
         tableView.reloadData()
         
     }
     
+    @IBAction func seaverAction(_ sender: Any) {
+        colors.insert("seaverrr", at: 0)
+        tableView.reloadData()
+    }
     
+    @IBAction func botBun(_ sender: Any) {
+        colors.insert("botbun", at: 0)
+        tableView.reloadData()
+    }
     @IBAction func lettuceAction(_ sender: Any) {
-        colors.insert(UIColor(red: 107/256.0, green: 157/256.0, blue: 27/256.0, alpha: 1), at: 0)
+        colors.insert("lettuce", at: 0)
         tableView.reloadData()
     }
     @IBAction func meatAction(_ sender: Any) {
-        colors.insert(UIColor(red: 110/256.0, green: 48/256.0, blue: 42/256.0, alpha: 1), at: 0)
+        colors.insert("meat", at: 0)
         tableView.reloadData()
     }
     @IBAction func bunAction(_ sender: Any) {
-        colors.insert(UIColor(red: 251/256.0, green: 205/256.0, blue: 130/256.0, alpha: 1), at: 0)
+        colors.insert("bun", at: 0)
         tableView.reloadData()
     }
     @IBAction func ketchupAction(_ sender: Any) {
-        colors.insert(UIColor(red: 193/256.0, green: 34/256.0, blue: 23/256.0, alpha: 1), at: 0)
+        colors.insert("ketchup", at: 0)
         tableView.reloadData()
     }
     @IBAction func tomatoAction(_ sender: Any) {
-        colors.insert(UIColor(red: 247/256.0, green: 35/256.0, blue: 21/256.0, alpha: 1), at: 0)
+        colors.insert("tomato", at: 0)
         tableView.reloadData()
     }
     
@@ -78,8 +101,10 @@ class BurgerViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")
-        cell?.backgroundColor = colors[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! CrazyCell?
+        
+        cell?.img.image = UIImage(named: colors[indexPath.row])
+        
         return cell!
     }
     

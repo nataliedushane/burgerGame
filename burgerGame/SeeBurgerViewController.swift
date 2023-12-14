@@ -9,7 +9,8 @@ import UIKit
 
 class SeeBurgerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
-    
+    var defaults = UserDefaults.standard
+
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var bloodImage: UIImageView!
@@ -24,23 +25,56 @@ class SeeBurgerViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     @IBAction func killButton(_ sender: Any) {
-        self.bloodImage.image = UIImage(named: "blood")!
-        bloodImage.isHidden = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+      
+        if(AppData.burgers[AppData.clicked].contains(_: "seaverrr")){
+            let ac = UIAlertController(title: "There is a Seaver in this burger", message: nil, preferredStyle: .alert)
+
+            let submitAction = UIAlertAction(title: "Ok I won't kill it", style: .default)
             
-            self.bloodImage.isHidden = true
+            ac.addAction(submitAction)
+
+            present(ac, animated: true)
         }
-        
-        AppData.burgers.remove(at: AppData.clicked)
-        AppData.rates.remove(at: AppData.clicked)
-        AppData.dates.remove(at: AppData.clicked)
-        AppData.names.remove(at: AppData.clicked)
-       
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        else{
             
-            self.navigationController?.popViewController(animated: true)
+            self.bloodImage.image = UIImage(named: "blood")!
+            bloodImage.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                
+                self.bloodImage.isHidden = true
+            }
+            
+            AppData.burgers.remove(at: AppData.clicked)
+            AppData.rates.remove(at: AppData.clicked)
+            AppData.dates.remove(at: AppData.clicked)
+            AppData.names.remove(at: AppData.clicked)
+            
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                
+               
+                
+                self.navigationController?.popViewController(animated: true)
+            }
         }
+      /*  let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(AppData.burgers){
+            self.defaults.set(encoded, forKey: "theBurgers")
+       }
+        
+        if let encoded = try? encoder.encode(AppData.dates){
+            self.defaults.set(encoded, forKey: "theDates")
+       }
+        
+        if let encoded = try? encoder.encode(AppData.names){
+            self.defaults.set(encoded, forKey: "theNames")
+       }
+        
+        if let encoded = try? encoder.encode(AppData.rates){
+            self.defaults.set(encoded, forKey: "theRates")
+       }
+        */
+        
        
 
         
@@ -51,8 +85,24 @@ class SeeBurgerViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBAction func editAction(_ sender: Any) {
         
         promptForAnswer()
+       /*
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(AppData.burgers){
+           defaults.set(encoded, forKey: "theBurgers")
+       }
         
-        label.text = "Rate: \(AppData.rates[AppData.clicked])\nBirthday: \(AppData.dates[AppData.clicked].formatted())"
+        if let encoded = try? encoder.encode(AppData.dates){
+           defaults.set(encoded, forKey: "theDates")
+       }
+        
+        if let encoded = try? encoder.encode(AppData.names){
+           defaults.set(encoded, forKey: "theNames")
+       }
+        
+        if let encoded = try? encoder.encode(AppData.rates){
+           defaults.set(encoded, forKey: "theRates")
+       }
+        */
     }
     
     
@@ -61,9 +111,9 @@ class SeeBurgerViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")
-        cell?.backgroundColor = AppData.burgers[AppData.clicked][indexPath.row]
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as! CrazyCell
+        cell.img.image = UIImage(named: AppData.burgers[AppData.clicked][indexPath.row])
+        return cell
     }
     
     
@@ -75,11 +125,13 @@ class SeeBurgerViewController: UIViewController, UITableViewDelegate, UITableVie
             let answer = ac.textFields![0]
             AppData.rates.remove(at: AppData.clicked)
             AppData.rates.insert(Int(answer.text!) ?? 0, at: AppData.clicked)
+            self.label.text = "Name: \(AppData.names[AppData.clicked])\nRate: \(AppData.rates[AppData.clicked])\nBirthday: \(AppData.dates[AppData.clicked].formatted())"
         }
 
         ac.addAction(submitAction)
 
         present(ac, animated: true)
+       
        
     }
     

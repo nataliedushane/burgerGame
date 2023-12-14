@@ -15,7 +15,9 @@ class BurgersViewController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         print("\(AppData.burgers.count)")
-        sort()
+        if(AppData.burgers.count > 0){
+            sort()
+        }
         burgerCollection.reloadData()
         burgerCollection.delegate = self
         burgerCollection.dataSource =  self
@@ -44,7 +46,7 @@ class BurgersViewController: UIViewController, UICollectionViewDelegate, UIColle
             cell.backgroundColor = UIColor(red: 143/256.0, green: 105/256.0, blue: 57/256.0, alpha: 1)
         }
         else{
-            cell.backgroundColor = UIColor.red
+            cell.backgroundColor = UIColor.yellow
         }
        
         return cell

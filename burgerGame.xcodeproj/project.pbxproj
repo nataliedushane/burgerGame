@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B74217092B20E0BB00F08395 /* SeeBurgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74217082B20E0BB00F08395 /* SeeBurgerViewController.swift */; };
+		B76240692B28B17D007CD2A1 /* CrazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76240682B28B17D007CD2A1 /* CrazyCell.swift */; };
 		B7ACC6B12B20CC2B0058FB61 /* BurgersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ACC6B02B20CC2B0058FB61 /* BurgersViewController.swift */; };
 		B7ACC6B32B20CE070058FB61 /* CazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ACC6B22B20CE070058FB61 /* CazyCell.swift */; };
 		B7DF5C512B1F777200C5B61E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DF5C502B1F777200C5B61E /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		B74217082B20E0BB00F08395 /* SeeBurgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeBurgerViewController.swift; sourceTree = "<group>"; };
+		B76240682B28B17D007CD2A1 /* CrazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrazyCell.swift; sourceTree = "<group>"; };
 		B7ACC6B02B20CC2B0058FB61 /* BurgersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgersViewController.swift; sourceTree = "<group>"; };
 		B7ACC6B22B20CE070058FB61 /* CazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CazyCell.swift; sourceTree = "<group>"; };
 		B7DF5C4D2B1F777200C5B61E /* burgerGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = burgerGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				B7DF5C562B1F777200C5B61E /* Main.storyboard */,
+				B76240682B28B17D007CD2A1 /* CrazyCell.swift */,
 				B7ACC6B22B20CE070058FB61 /* CazyCell.swift */,
 				B7DF5C522B1F777200C5B61E /* SceneDelegate.swift */,
 				B7DF5C502B1F777200C5B61E /* AppDelegate.swift */,
@@ -278,6 +281,7 @@
 				B7DF5C512B1F777200C5B61E /* AppDelegate.swift in Sources */,
 				B74217092B20E0BB00F08395 /* SeeBurgerViewController.swift in Sources */,
 				B7ACC6B32B20CE070058FB61 /* CazyCell.swift in Sources */,
+				B76240692B28B17D007CD2A1 /* CrazyCell.swift in Sources */,
 				B7DF5C532B1F777200C5B61E /* SceneDelegate.swift in Sources */,
 				B7DF5C842B1F78A400C5B61E /* BurgerViewController.swift in Sources */,
 				B7ACC6B12B20CC2B0058FB61 /* BurgersViewController.swift in Sources */,
