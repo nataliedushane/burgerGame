@@ -15,7 +15,13 @@ class AppData : Codable{
     static var dates = [Date]()
     static var names = [String]()
 }
-
+/*
+ Programming: Variables, constants, optionals, Operators, if/else, for loops, arrays, functions, inheritance, class, nil coalescing, 
+ 
+ UIElements: Textfield, button, label, collectionview, tableview, view controller, alert controller, navigation controller, constraints
+ 
+ */
+ 
 class ViewController: UIViewController {
 
     var defaults = UserDefaults.standard

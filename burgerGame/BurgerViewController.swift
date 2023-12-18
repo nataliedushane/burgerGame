@@ -31,6 +31,14 @@ class BurgerViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
             present(ac, animated: true)
         }
+        else if(colors[0] == "seaverrr"){
+                    let ac = UIAlertController(title: "You can't take away Seaver :(", message: nil, preferredStyle: .alert)
+
+                    let submitAction = UIAlertAction(title: "Ok sorry that's my bad", style: .default)
+                    ac.addAction(submitAction)
+
+                    present(ac, animated: true)
+                }
         else{
             colors.remove(at: 0)
             tableView.reloadData()
