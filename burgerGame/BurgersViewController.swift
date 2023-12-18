@@ -46,7 +46,7 @@ class BurgersViewController: UIViewController, UICollectionViewDelegate, UIColle
             cell.backgroundColor = UIColor(red: 143/256.0, green: 105/256.0, blue: 57/256.0, alpha: 1)
         }
         else{
-            cell.backgroundColor = UIColor.yellow
+            cell.backgroundColor = UIColor(red: 145/256.0, green: 180/256.0, blue: 201/256.0, alpha: 1)
         }
        
         return cell
